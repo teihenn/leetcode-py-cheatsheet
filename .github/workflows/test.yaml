@@ -13,7 +13,17 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: Cache uv installation
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.cargo/bin/uv
+          ~/.cargo/registry
+          ~/.cargo/git
+        key: ${{ runner.os }}-uv-${{ hashFiles('.github/workflows/test.yml') }}
+
     - name: Install uv
+      if: steps.cache.outputs.cache-hit != 'true'
       run: |
         curl -LsSf https://astral.sh/uv/install.sh | sh
         echo "$HOME/.cargo/bin" >> $GITHUB_PATH
