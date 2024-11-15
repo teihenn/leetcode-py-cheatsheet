@@ -1,10 +1,15 @@
+"""Test cases for the anagram module."""
+
 import unittest
 
 from src.anagram import are_anagrams_array, are_anagrams_dict, are_anagrams_sorting
 
 
 class TestAnagramMethods(unittest.TestCase):
+    """Test cases for the anagram module."""
+
     def setUp(self):
+        """Set up the test cases."""
         self.test_cases = [
             ("listen", "silent", True),
             ("triangle", "integral", True),
@@ -16,6 +21,7 @@ class TestAnagramMethods(unittest.TestCase):
         ]
 
     def test_are_anagrams_sorting(self):
+        """Test the are_anagrams_sorting function."""
         for str1, str2, expected in self.test_cases:
             with self.subTest(str1=str1, str2=str2):
                 self.assertEqual(
@@ -25,6 +31,7 @@ class TestAnagramMethods(unittest.TestCase):
                 )
 
     def test_are_anagrams_dict(self):
+        """Test the are_anagrams_dict function."""
         for str1, str2, expected in self.test_cases:
             with self.subTest(str1=str1, str2=str2):
                 self.assertEqual(
@@ -34,6 +41,7 @@ class TestAnagramMethods(unittest.TestCase):
                 )
 
     def test_are_anagrams_array(self):
+        """Test the are_anagrams_array function."""
         for str1, str2, expected in self.test_cases:
             with self.subTest(str1=str1, str2=str2):
                 self.assertEqual(

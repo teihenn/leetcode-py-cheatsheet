@@ -1,3 +1,7 @@
+"""
+This module contains functions to determine if two strings are anagrams.
+"""
+
 from collections import defaultdict
 
 
@@ -16,9 +20,7 @@ def are_anagrams_sorting(str1, str2):
 
 # Method 2: Using Character Count with defaultdict for both strings
 def are_anagrams_dict(str1, str2):
-    """
-    Determines if two strings are anagrams by counting characters with defaultdict for both strings.
-    """
+    """Determines if two strings are anagrams by counting characters with defaultdict for both strings."""
     # Remove whitespace and convert to lowercase for case-insensitive comparison
     str1 = str1.replace(" ", "").lower()
     str2 = str2.replace(" ", "").lower()
@@ -42,8 +44,8 @@ def are_anagrams_dict(str1, str2):
 
 # Method 3: Using Character Count with Array (assuming ASCII characters)
 def are_anagrams_array(str1, str2):
-    """
-    Determines if two strings are anagrams by counting characters with an array.
+    """Determines if two strings are anagrams by counting characters with an array.
+
     Assumes only ASCII characters.
     """
     # Remove whitespace and convert to lowercase for case-insensitive comparison
