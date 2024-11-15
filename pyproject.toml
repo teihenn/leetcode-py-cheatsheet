@@ -4,6 +4,34 @@ version = "0.1.0"
 description = "Quick reference for common LeetCode Python techniques and patterns."
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = [
-    "ruff>=0.7.4",
+dependencies = ["ruff>=0.7.4"]
+
+[tool.ruff]
+select = [
+    "N",   # pep8-naming - Naming convention checks (e.g., function/class naming)
+    "E",   # pycodestyle errors - Basic Python code style checks
+    "W",   # pycodestyle warnings - Style warnings that aren't errors
+    "D",   # pycodestyle docstrings - Docstring checks
+    "F",   # pyflakes - Logical errors like unused imports/variables
+    "I",   # isort - Import sorting and organization
+    "C90", # mccabe - Code complexity checks (cyclomatic complexity)
+    "S",   # bandit - Security issue detection
 ]
+
+ignore = [
+    "D200", # One-line docstring should fit on one line
+    "D212", # Multi-line docstring summary should start at the first line
+    "E501", # Line too long
+]
+fixable = [
+    "ALL",
+] # Enable automatic fixing for all rules that support auto-fixing
+exclude = [".ruff_cache"]
+target-version = "py313"
+
+[tool.ruff.lint.pydocstyle]
+convention = "google" # Google style docstrings
+
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10 # Maximum cyclomatic complexity allowed for a function or method.
