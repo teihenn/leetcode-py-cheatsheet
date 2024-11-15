@@ -1,4 +1,5 @@
 """Test cases for the anagram module."""
+# mypy: ignore-errors
 
 import unittest
 
@@ -30,7 +31,7 @@ class TestAnagramMethods(unittest.TestCase):
                     f"Failed for {str1} and {str2}",
                 )
 
-    def test_are_anagrams_dict(self):
+    def test_are_anagrams_dict(self) -> None:
         """Test the are_anagrams_dict function."""
         for str1, str2, expected in self.test_cases:
             with self.subTest(str1=str1, str2=str2):
@@ -40,7 +41,7 @@ class TestAnagramMethods(unittest.TestCase):
                     f"Failed for {str1} and {str2}",
                 )
 
-    def test_are_anagrams_array(self):
+    def test_are_anagrams_array(self) -> None:
         """Test the are_anagrams_array function."""
         for str1, str2, expected in self.test_cases:
             with self.subTest(str1=str1, str2=str2):

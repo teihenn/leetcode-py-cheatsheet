@@ -6,7 +6,7 @@ from collections import defaultdict
 
 
 # Method 1: Using Sorting
-def are_anagrams_sorting(str1, str2):
+def are_anagrams_sorting(str1: str, str2: str) -> bool:
     """
     Determines if two strings are anagrams by sorting.
     """
@@ -19,7 +19,7 @@ def are_anagrams_sorting(str1, str2):
 
 
 # Method 2: Using Character Count with defaultdict for both strings
-def are_anagrams_dict(str1, str2):
+def are_anagrams_dict(str1: str, str2: str) -> bool:
     """Determines if two strings are anagrams by counting characters with defaultdict for both strings."""
     # Remove whitespace and convert to lowercase for case-insensitive comparison
     str1 = str1.replace(" ", "").lower()
@@ -43,7 +43,7 @@ def are_anagrams_dict(str1, str2):
 
 
 # Method 3: Using Character Count with Array (assuming ASCII characters)
-def are_anagrams_array(str1, str2):
+def are_anagrams_array(str1: str, str2: str) -> bool:
     """Determines if two strings are anagrams by counting characters with an array.
 
     Assumes only ASCII characters.
