@@ -43,7 +43,7 @@ max-complexity = 10 # Maximum cyclomatic complexity allowed for a function or me
 
 [tool.mypy]
 python_version = "3.13"
-exclude = ["^test/"]                   # TODO: this seems to not work
+#exclude = ["^test/"] # TODO: this seems to not work
 disable_error_code = ["var-annotated"]
 
 #strict = true                 # Enable strict type checking mode
