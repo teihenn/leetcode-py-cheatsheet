@@ -1,0 +1,13 @@
+
+<!-- markdownlint-disable -->
+
+[General]
+- Use English as the default language unless specified otherwise.
+
+[Testing]
+- Use unittest module for testing
+- In tests, execution-related code like the following is unnecessary:
+```python
+if __name__ == '__main__':
+    unittest.main()
+```
