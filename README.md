@@ -1,6 +1,6 @@
 # leetcode-py-cheatsheet
 
-[![Python Tests](https://github.com/teihenn/leetcode-py-cheatsheet/actions/workflows/test.yaml/badge.svg)](https://github.com/teihenn/leetcode-py-cheatsheet/actions/workflows/test.yaml)
+[![Python Tests](https://github.com/teihenn/leetcode-py-cheatsheet/actions/workflows/ci.yaml/badge.svg)](https://github.com/teihenn/leetcode-py-cheatsheet/actions/workflows/ci.yaml)
 
 Quick reference for common LeetCode Python techniques and patterns.
 
