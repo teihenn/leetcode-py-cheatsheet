@@ -56,3 +56,8 @@ no_implicit_optional = true   # Disallow implicit optional types
 warn_return_any = true        # Warn about returning Any type
 cache_dir = ".mypy_cache"     # Directory for cache files
 ignore_missing_imports = true # Skip type checking for missing imports (useful for third-party packages)
+
+# Relax the checks in the test
+[[tool.mypy.overrides]]
+module = "test.*"
+disallow_untyped_defs = false # Function is missing a return type annotation
