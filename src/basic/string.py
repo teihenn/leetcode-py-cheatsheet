@@ -38,6 +38,7 @@ def extract_alphanumeric(s: str) -> str:
         >>> extract_alphanumeric("こんにちは123ABCワールド")
         '123ABC'
     """
+    # isalnum() alone would include Unicode alphanumeric characters (like '１２３４５' or 'ＡＢＣＤＥ')
     # isascii() ensures we only get ASCII characters (0-127),
     # excluding Unicode characters like Japanese, Emoji, etc.
     return "".join(c for c in s if c.isascii() and c.isalnum())
