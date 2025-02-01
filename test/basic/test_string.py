@@ -4,7 +4,11 @@ Test module for string operations.
 
 import unittest
 
-from src.basic.string import extract_alphanumeric, reverse_string
+from src.basic.string import (
+    extract_alphanumeric,
+    reverse_string,
+    reverse_string_builtin,
+)
 
 
 class TestString(unittest.TestCase):
@@ -30,6 +34,27 @@ class TestString(unittest.TestCase):
     def test_reverse_string_with_spaces(self):
         """Test for string with spaces"""
         self.assertEqual(reverse_string("hello world"), "dlrow olleh")
+
+    def test_reverse_string_builtin_basic(self):
+        """Test for basic string reversal using built-in function"""
+        self.assertEqual(reverse_string_builtin("hello"), "olleh")
+        self.assertEqual(reverse_string_builtin("python"), "nohtyp")
+
+    def test_reverse_string_builtin_empty(self):
+        """Test for empty string using built-in function"""
+        self.assertEqual(reverse_string_builtin(""), "")
+
+    def test_reverse_string_builtin_single_char(self):
+        """Test for single character string using built-in function"""
+        self.assertEqual(reverse_string_builtin("a"), "a")
+
+    def test_reverse_string_builtin_japanese(self):
+        """Test for Japanese string using built-in function"""
+        self.assertEqual(reverse_string_builtin("こんにちは"), "はちにんこ")
+
+    def test_reverse_string_builtin_with_spaces(self):
+        """Test for string with spaces using built-in function"""
+        self.assertEqual(reverse_string_builtin("hello world"), "dlrow olleh")
 
     def test_extract_alphanumeric_basic(self):
         """Test for basic alphanumeric extraction"""

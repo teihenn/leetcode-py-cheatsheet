@@ -20,6 +20,27 @@ def reverse_string(text: str) -> str:
     return text[::-1]
 
 
+def reverse_string_builtin(text: str) -> str:
+    """
+    Returns the reversed string using Python's built-in reversed() function
+
+    Args:
+        text (str): The string to be reversed
+
+    Returns:
+        str: The reversed string
+
+    Examples:
+        >>> reverse_string_builtin("hello")
+        'olleh'
+    """
+    # reversed(sequence): creates an iterator that yields elements in reverse order
+    #                    (works with sequences like str, list, tuple, but not with unordered iterables like set)
+    # "".join(): concatenates iterator elements into a single string using empty string as separator
+    # example: "hello" -> iterator('o','l','l','e','h') -> "olleh"
+    return "".join(reversed(text))
+
+
 def extract_alphanumeric(s: str) -> str:
     """
     Extracts only alphanumeric characters from the given string
