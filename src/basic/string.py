@@ -17,6 +17,11 @@ def reverse_string(text: str) -> str:
         >>> reverse_string("hello")
         'olleh'
     """
+    # text[::-1]: String slicing with step -1
+    # - Start: empty (default: beginning of string)
+    # - End: empty (default: end of string)
+    # - Step: -1 (traverse backwards)
+    # Example: "hello" -> "olleh"
     return text[::-1]
 
 
