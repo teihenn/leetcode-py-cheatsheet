@@ -3,6 +3,14 @@
 # General
 - Use English as the default language unless specified otherwise.
 
+# Python Coding Rules
+
+## Python files should have module-level docstrings
+- All .py files should start with a module-level docstring that describes the purpose and contents of the module
+- The docstring should be enclosed in triple quotes (""")
+- The first line should be a brief summary
+- Following lines (if needed) should provide more detailed description after a blank line
+
 # Testing
 - Use unittest module for testing
 - In tests, execution-related code like the following is unnecessary:
