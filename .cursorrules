@@ -1,10 +1,9 @@
-
 <!-- markdownlint-disable -->
 
-[General]
+# General
 - Use English as the default language unless specified otherwise.
 
-[Testing]
+# Testing
 - Use unittest module for testing
 - In tests, execution-related code like the following is unnecessary:
 ```python
