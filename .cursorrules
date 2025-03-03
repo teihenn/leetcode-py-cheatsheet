@@ -1,7 +1,7 @@
 <!-- markdownlint-disable -->
 
 # General
-- Use English as the default language unless specified otherwise.
+- Write comments and docstring in English unless specified otherwise.
 
 # Python Coding Rules
 
