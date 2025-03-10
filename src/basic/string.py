@@ -13,6 +13,12 @@ def reverse_string(text: str) -> str:
     Returns:
         str: The reversed string
 
+    Time Complexity:
+        O(n) where n is the length of the string
+
+    Space Complexity:
+        O(n) as a new reversed string is created
+
     Examples:
         >>> reverse_string("hello")
         'olleh'
@@ -35,6 +41,12 @@ def reverse_string_builtin(text: str) -> str:
     Returns:
         str: The reversed string
 
+    Time Complexity:
+        O(n) where n is the length of the string
+
+    Space Complexity:
+        O(n) as a new reversed string is created
+
     Examples:
         >>> reverse_string_builtin("hello")
         'olleh'
@@ -55,6 +67,12 @@ def extract_alphanumeric(s: str) -> str:
 
     Returns:
         str: String containing only alphanumeric characters
+
+    Time Complexity:
+        O(n) where n is the length of the string, as we check each character
+
+    Space Complexity:
+        O(n) in the worst case (if all characters are alphanumeric and ASCII)
 
     Examples:
         >>> extract_alphanumeric("Hello, World! 123")
